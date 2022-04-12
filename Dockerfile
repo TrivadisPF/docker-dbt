@@ -4,7 +4,7 @@ ENV         DBT_HOME=/usr/app \
 
 FROM        base AS build
 ARG         DIST_MIRROR=https://github.com/dbt-labs/dbt-core/archive/refs/tags
-ARG         VERSION=''
+ARG         VERSION='1.0.0'
 ARG         PLUGINS=''
 RUN         apt-get update && \
             apt-get install -y --no-install-recommends \
