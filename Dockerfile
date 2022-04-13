@@ -5,7 +5,7 @@ ENV         DBT_HOME=/usr/app \
 FROM        base AS build
 ARG         DIST_MIRROR=https://github.com/dbt-labs/dbt-core/archive/refs/tags
 ARG         VERSION='1.0.0'
-ARG         PLUGINS=''
+ARG         PLUGINS='spark,trino'
 RUN         apt-get update && \
             apt-get install -y --no-install-recommends \
               software-properties-common \
